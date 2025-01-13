@@ -8,8 +8,9 @@ items:
     items:
       - name: Another page
         href: anotherpage.md
-      - name: Test page
-        href: test_page.md
+        items:
+        - name: Test page
+          href: test_page.md
   - name: Sub-Section
     include:
       path: sub-section/toc.yaml
