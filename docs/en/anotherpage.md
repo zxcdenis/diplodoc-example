@@ -33,7 +33,6 @@ input-folder
         <h1>Добро пожаловать на мою страницу</h1>
         <p>Здесь вы найдете интересную информацию.</p>
     </header>
-
     <main>
         <div class="cards-container">
             <div class="card">
@@ -56,11 +55,9 @@ input-folder
             </div>
         </div>
     </main>
-
     <footer>
         <p>&copy; 2024 Моя Страница</p>
     </footer>
-
 </body>
 </html>
 
