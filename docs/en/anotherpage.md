@@ -20,6 +20,8 @@ input-folder
 |-- _includes (directory for reusable content)
     |-- faq_shared_block.md
 ```
+
+## HTML Sample
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -63,10 +65,57 @@ input-folder
                      Постарался сделать разметку логичной и легкой для понимания.
                 </p>
             </section>
+            <section class="table-section">
+              <h2>Пример таблицы</h2>
+              <div class="table-container">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Имя</th>
+                      <th>Фамилия</th>
+                      <th>Возраст</th>
+                      <th>Город</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Иван</td>
+                      <td>Иванов</td>
+                      <td>30</td>
+                      <td>Москва</td>
+                    </tr>
+                    <tr>
+                      <td>Петр</td>
+                      <td>Петров</td>
+                      <td>25</td>
+                      <td>Санкт-Петербург</td>
+                    </tr>
+                     <tr>
+                      <td>Анна</td>
+                      <td>Сидорова</td>
+                      <td>28</td>
+                      <td>Казань</td>
+                    </tr>
+                     <tr>
+                      <td>Елена</td>
+                      <td>Козлова</td>
+                      <td>35</td>
+                      <td>Екатеринбург</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
         </div>
     </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Моя красивая страница</p>
+        </div>
+    </footer>
 </body>
 </html>
+
 
 
 

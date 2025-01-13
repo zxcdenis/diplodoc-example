@@ -1,3 +1,4 @@
+`css
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -46,7 +47,7 @@ section {
 
 .features {
     display: flex;
-    flex-wrap: wrap;
+flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
@@ -87,6 +88,37 @@ footer p {
     opacity: 0.8;
 }
 
+/* Стили для таблицы */
+.table-section {
+  margin-bottom: 2rem;
+}
+.table-container {
+   overflow-x: auto; /* Горизонтальная прокрутка для маленьких экранов */
+   margin-top: 1rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
 @media (max-width: 768px) {
     .container {
         width: 95%;
