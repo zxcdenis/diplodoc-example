@@ -26,39 +26,47 @@ input-folder
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Красивая Страница</title>
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Добро пожаловать на мою страницу</h1>
-        <p>Здесь вы найдете интересную информацию.</p>
+        <div class="container">
+            <h1>Добро пожаловать</h1>
+            <p>Простой и элегантный дизайн</p>
+        </div>
     </header>
     <main>
-        <div class="cards-container">
-            <div class="card">
-                <img src="https://via.placeholder.com/200x150/4a90e2/ffffff?text=Картинка+1" alt="Картинка 1">
-                <h3>Заголовок карточки 1</h3>
-                <p>Краткое описание карточки 1.</p>
-                <a href="#">Читать дальше</a>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/200x150/50e3c2/ffffff?text=Картинка+2" alt="Картинка 2">
-                <h3>Заголовок карточки 2</h3>
-                <p>Краткое описание карточки 2.</p>
-                <a href="#">Читать дальше</a>
-            </div>
-             <div class="card">
-                <img src="https://via.placeholder.com/200x150/ffb647/ffffff?text=Картинка+3" alt="Картинка 3">
-                <h3>Заголовок карточки 3</h3>
-                <p>Краткое описание карточки 3.</p>
-                <a href="#">Читать дальше</a>
-            </div>
+        <div class="container">
+            <section class="feature-section">
+                <h2>Основные особенности</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>Чистый дизайн</h3>
+                        <p>Минималистичная и понятная структура.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Адаптивность</h3>
+                        <p>Отлично выглядит на любых устройствах.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Простота</h3>
+                        <p>Легко использовать и модифицировать.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="content-section">
+                <h2>Основное содержание</h2>
+                 <p>
+                    Здесь вы можете разместить основной контент вашего сайта. Это может быть текст, списки, таблицы и т.д. 
+                    Я постарался сделать дизайн легким и понятным. Основной упор идет на типографику и чистые линии.
+                    <br>
+                     Постарался сделать разметку логичной и легкой для понимания.
+                </p>
+            </section>
         </div>
     </main>
-    <footer>
-        <p>&copy; 2024 Моя Страница</p>
-    </footer>
 </body>
 </html>
+
 
 
