@@ -1,18 +1,3 @@
-# title: Documentation Project Template
-# href: index.yaml
-# items: 
-#   - name: About
-#     href: about.md
-#   - name: Additional page 
-#     href: page.md
-#       items: 
-#       - name: Another page 
-#         href: anotherpage.md
-#   - name: Sub-Section 
-#     include:
-#       path: sub-section/toc.yaml
-#       mode: link
-
 title: Documentation Project Template
 href: index.yaml
 items: 
@@ -20,9 +5,24 @@ items:
     href: about.md
   - name: Additional page 
     href: page.md
-  - name: Another page 
-    href: anotherpage.md
+      items: 
+      - name: Another page 
+        href: anotherpage.md
   - name: Sub-Section 
     include:
       path: sub-section/toc.yaml
       mode: link
+
+# title: Documentation Project Template
+# href: index.yaml
+# items: 
+#   - name: About
+#     href: about.md
+#   - name: Additional page 
+#     href: page.md
+#   - name: Another page 
+#     href: anotherpage.md
+#   - name: Sub-Section 
+#     include:
+#       path: sub-section/toc.yaml
+#       mode: link
