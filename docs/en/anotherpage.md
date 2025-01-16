@@ -21,6 +21,8 @@ input-folder
     |-- faq_shared_block.md
 ```
 
+
+
 ## HTML Sample
 <!DOCTYPE html>
 <html lang="ru">

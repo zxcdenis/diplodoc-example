@@ -78,6 +78,7 @@ def hello_world():
 hello_world()
 ```
 
+
 {% cut "Кааааат" %}
 
 а
