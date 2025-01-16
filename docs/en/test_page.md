@@ -1,6 +1,8 @@
+---
 metadata:
     - name: keywords
       content: 'справка к50'
+---
 
 # Добро пожаловать на мою пробную страницу Markdown!
 
