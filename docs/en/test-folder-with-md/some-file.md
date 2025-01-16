@@ -60,6 +60,8 @@
 
 ## 💻 Программный Код - Язык Космоса
 
-**Какой-то текст**{style="color:red"}<p style="color: red">Текст</p>
+**Какой-то текст**{style="color:red"}
 
-**Бум**{style="color:red; font-weight: normal;"}
+<p style="color: green">Еще какой-то текст</p>
+
+**Бум**{style="color:purple; font-weight: normal;"}
