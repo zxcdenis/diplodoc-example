@@ -67,3 +67,26 @@
 **Бум**{style="color:purple; font-weight: normal;"}
 
 {violet}(Текст)
+
+<nav class="dropdown-menu">
+  <ul>
+    <li><a href="#">Пункт 1</a>
+      <ul>
+        <li><a href="#">Подпункт 1.1</a></li>
+        <li><a href="#">Подпункт 1.2</a>
+          <ul>
+            <li><a href="#">Подпункт 1.2.1</a></li>
+            <li><a href="#">Подпункт 1.2.2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#">Пункт 2</a>
+      <ul>
+        <li><a href="#">Подпункт 2.1</a></li>
+        <li><a href="#">Подпункт 2.2</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Пункт 3</a></li>
+  </ul>
+</nav>
