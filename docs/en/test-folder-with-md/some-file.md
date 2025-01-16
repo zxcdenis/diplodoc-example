@@ -65,3 +65,5 @@
 <p style="color: green">Еще какой-то текст</p>
 
 **Бум**{style="color:purple; font-weight: normal;"}
+
+{violet}(Текст)
