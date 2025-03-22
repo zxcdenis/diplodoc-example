@@ -1,0 +1,45 @@
+# default: # набор значений по умолчанию
+#   ru:
+#     locale: ru
+#   locale: en
+#   platform: browser
+#   my_var: текст в переменной
+# ios: # набор значений для ios
+#   platform: ios
+# android: # набор значений для android
+#   platform: android
+
+default: # Default settings for all platforms and languages
+
+  my_var: текст в переменной
+
+  i18n: # Translations for various strings
+
+    my_var: текст в переменной
+    app_name:
+      en: My Awesome App
+      ru: Мое Замечательное Приложение
+    welcome_message:
+      en: Welcome, user!
+      ru: Добро пожаловать, пользователь!
+    button_label:
+      en: "Click Me"
+      ru: "Нажми Меня"
+    settings:
+      en: "Settings"
+      ru: "Настройки"
+    close:
+      en: "Close"
+      ru: "Закрыть"
+    email_address:
+      en: "Email Address"
+      ru: "Электронная почта"
+    password:
+      en: "Password"
+      ru: "Пароль"
+    login:
+      en: "Login"
+      ru: "Войти"
+    logout:
+      en: "Logout"
+      ru: "Выйти"

@@ -1,1 +1,8 @@
-langs: ['en']
+langs: ['en','ru']
+logo-options:
+  src:
+    en: .\en\assets\icons\Screenshot.png
+resources:
+  csp:
+    - "frame-src":
+        - "https://docs.yandex-team.ru/tracker/"

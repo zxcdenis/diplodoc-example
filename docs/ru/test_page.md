@@ -2,13 +2,23 @@
 metadata:
     - name: keywords
       content: 'справка к50'
+deprecated: true  
+deprecated_message: "Раздел устарел. Перейдите на новую версию документации."
 ---
+
+{% if page.meta.deprecated %}
+  <div class="deprecated-banner" title="{{ page.meta.deprecated_message }}">
+    ⚠️ Этот раздел устарел.
+  </div>
+{% endif %}
 
 # Добро пожаловать на мою пробную страницу Markdown!
 
 Эта страница создана для демонстрации возможностей языка разметки Markdown. Здесь вы найдете примеры различных элементов, которые можно использовать для форматирования текста.
 
 ## Заголовки
+
+### [Я анкор для раздела](##advantages-of-the-platform)
 
 Заголовки обозначаются с помощью символа `#`. Чем больше `#`, тем меньше заголовок.
 
@@ -60,92 +70,6 @@ metadata:
 
 [Ссылка на Wikipedia](https://www.wikipedia.org "Перейти на Wikipedia")
 
-
-{% cut "Name" %} 
-
-Контент ката вывывывыывы
-
-{#acnhor-cut}
-
-{% endcut %}
-
-
-## Заголовок
-
-<ul class="custom-counter">
-    <li>Текст
-        <ul>
-            <li>Вложенный текст</li>
-        </ul>
-    </li>
-</ul>
-
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>Пример кастомной нумерации</title>
-  <style>
-    /* Сбрасываем стандартные стили для списка */
-    .custom-counter {
-      counter-reset: item;
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
-    /* Элементы первого уровня */
-    .custom-counter > li {
-      counter-increment: item;
-      position: relative;
-      padding-left: 3em; /* отступ для размещения нумерации */
-      margin-bottom: 0.5em;
-    }
-    .custom-counter > li::before {
-      content: "1." counter(item) ". ";
-      position: absolute;
-      left: 0;
-      width: 3em;
-    }
-    /* Вложенные списки */
-    .custom-counter li ul {
-      counter-reset: subitem; /* сбрасываем счётчик вложенных пунктов */
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
-    /* Элементы вложенного списка */
-    .custom-counter li ul > li {
-      counter-increment: subitem;
-      position: relative;
-      padding-left: 4em;
-      margin-bottom: 0.5em;
-    }
-    .custom-counter li ul > li::before {
-      /* Используем родительский счётчик (item) и вложенный (subitem) */
-      content: "1." counter(item) "." counter(subitem) ". ";
-      position: absolute;
-      left: 0;
-      width: 4em;
-    }
-  </style>
-</head>
-<body>
-  <!-- Заголовок, оформленный отдельно -->
-  <h2>Заголовок</h2>
-  
-  <!-- Список с кастомной нумерацией -->
-  <ul class="custom-counter">
-    <li>Текст
-      <ul>
-        <li>Вложенный текст</li>
-      </ul>
-    </li>
-  </ul>
-</body>
-</html>
-
-
-
 ## Изображения
 
 Вставьте изображения с помощью синтаксиса: `![альтернативный текст](путь_к_изображению)`.
@@ -170,8 +94,6 @@ def hello_world():
 hello_world()
 ```
 
-[Ссылка на кат](#acnhor-cut)
-
 
 {% cut "Кааааат" %}
 
@@ -194,15 +116,32 @@ hello_world()
  
     Чтобы увидеть медийные кампании, вместо **Кампании с оплатой за клики** выберите **Кампании с оплатой за&nbsp;показы**. 
  
-    <!-- Text --> 
+    {% if locale=='ru' %} 
+<!--     #| 
  
-1. **Вкладки навигации** 
+    || 
+    ![](../_assets/video-icon.png) 
+    | 
+    Новый интерфейс Директа. Работа с фильтрами 
+ 
+    {% cut "Посмотреть видео" %} 
+ 
+    @[youtube](https://www.youtube.com/embed/8ys5vmL6NqQ) 
+ 
+    {% endcut %} 
+ 
+    || 
+ 
+    |# --> 
+    {% endif %} 
+ 
+4. **Вкладки навигации** 
  
     Вы можете переключаться между объектами: кампаниями, группами, объявлениями и ключевыми фразами. Сначала отметьте нужные кампании, затем перейдите на нужную вкладку, например, **Группы**. Там будут только группы выбранных кампаний. 
  
     Аналогично вы можете перейти из кампаний сразу к объявлениям или из группы к ключевым фразам и&nbsp;обратно. 
  
-1. **Настройка внешнего вида таблицы** 
+5. **Настройка внешнего вида таблицы** 
  
     Вы можете добавлять и удалять столбцы с данными на страницах кампаний, групп, объявлений, фраз. Нажмите ! и отметьте нужные показатели. Чтобы изменить порядок расположения данных, передвиньте показатель на нужное место. 
  
@@ -225,7 +164,7 @@ hello_world()
     |# --> 
     {% endif %} 
  
-1. **Действия** 
+6. **Действия** 
  
     Действия помогут, если нужно выполнить какие-то операции с выбранными объектами: изменить статус или&nbsp;параметры, перейти в Мастер отчетов.
 
@@ -236,52 +175,6 @@ hello_world()
   {% list tabs %}
 
   - Подвкладка 1.1
-
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beautiful Minimal Page</title>
-    <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-    <header>
-        <div class="container">
-        <h1>My Beautiful Page</h1>
-        <p>Design. Simplicity. Elegance.</p>
-        </div>
-    </header>
-    <main>
-        <section class="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>
-            Welcome to our beautiful website, where we value simplicity and elegance.
-            We are dedicated to creating unique and functional designs that stand out.
-            </p>
-        </div>
-        </section>
-        <section class="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-cards">
-            <div class="card">
-                <h3>Design</h3>
-                <p>Creating stunning and intuitive user experiences.</p>
-            </div>
-            <div class="card">
-                <h3>Development</h3>
-                <p>Building fast, responsive, and scalable websites.</p>
-            </div>
-            <div class="card">
-                <h3>Consulting</h3>
-                <p>Helping you turn your ideas into reality.</p>
-            </div>
-            </div>
-        </div>
-        </section>
-    </main>
-    </body>
-    </html>
 
     {% list tabs %}
 
@@ -319,12 +212,60 @@ hello_world()
 {% endlist %}
 
 
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beautiful Minimal Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>My Beautiful Page</h1>
+      <p>Design. Simplicity. Elegance.</p>
+    </div>
+  </header>
+  <main>
+    <section class="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>
+          Welcome to our beautiful website, where we value simplicity and elegance.
+          We are dedicated to creating unique and functional designs that stand out.
+        </p>
+      </div>
+    </section>
+    <section class="services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+          <div class="card">
+            <h3>Design</h3>
+            <p>Creating stunning and intuitive user experiences.</p>
+          </div>
+          <div class="card">
+            <h3>Development</h3>
+            <p>Building fast, responsive, and scalable websites.</p>
+          </div>
+          <div class="card">
+            <h3>Consulting</h3>
+            <p>Helping you turn your ideas into reality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>© 2025 Beautiful Page. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
 Текст перед переменной {{ my_var }}
 
 Переменная app_name {{ app_name }}
-
-1. Какой-то текст{style="color:red"}
-2. <p style="color: green">Еще какой-то текст</p> текст екст
-3. **text**{style="color:purple; font-weight: normal;"} text
-
-
+   
+{% include [Открыть чат](_includes/chat-button.md) %}

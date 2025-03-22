@@ -1,21 +1,5 @@
 title: Documentation Project Template
 href: index.yaml
-navigation:
-  logo:
-    text: 'Logo'
-    url: 'https://diplodoc.com'
-    urlTitle: 'Title'
-    dark:
-      text: 'Logo Dark'
-      icon: 'https://storage.yandexcloud.net/diplodoc-www-assets/logo/ddos-logo-dark.svg'
-    light:
-      text: 'Моя кнопка'
-      icon: 'https://web.telegram.org/b24ceac1-c8eb-4845-b887-c20dbc28c991'
-    header:
-      leftItems:
-        - type: 'button'
-          text: 'Моя кнопка'
-          url: 'https://gitlab.kazu.su'
 items:
   - name: some file
     href: test-folder-with-md/some-file.md

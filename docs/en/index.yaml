@@ -1,4 +1,8 @@
 title: Documentation Template
+items:
+    include:
+      path: sub-section/toc.yaml
+      mode: link
 links:
   - title: About
     href: about.md
@@ -8,3 +12,95 @@ links:
     href: anotherpage.md
   - title: Sub-section on index page
     href: sub-section/
+
+blocks:
+  - type: header-block
+    title: "Личный кабинет партнера ритейла"
+    description: |
+      [Личный кабинет](https://pickerapp.eda.yandex.ru/pa/next/stores) — это платформа для управления своими магазинами.
+
+      В личном кабинете вы можете проверить информацию о своих магазинах и [связаться со службой поддержки].
+
+  - type: card-layout-block
+    colSizes:
+      all: 12
+      xl: 4
+      sm: 6
+      md: 4
+    children:
+
+      - type: image-card
+        
+        title: Личный кабинет
+        text: |
+          [Вход в личный кабинет]
+
+          [Магазины]
+
+          [Получить помощь]
+
+      - type: image-card
+        
+        title: Прием и выдача заказов
+        text: |
+          [Как изменить состав заказа]
+
+          [Рекомендации по упаковке товаров]
+
+      - type: image-card
+        
+        title: Каталог
+        text: |
+          [Навигация и коммуникация]
+
+          [Требования к фото]
+
+          [Недопустимые к доставке товары]
+
+      - type: image-card
+        
+        title: Качество работы партнеров
+        text: |
+          [Работа над качеством]
+
+          [Когда мы возвращаем деньги пользователю]
+
+      - type: image-card
+        
+        title: Продвижение партнеров
+        text: |
+          [Акции]
+
+          [Инструменты продвижения]
+
+          [Документы и порядок расчетов]
+
+      - type: image-card
+        
+        title: Бухгалтерия и финансы
+        text: |
+          [Вопросы по бухгалтерии]
+
+      - type: image-card
+        title: Для партнеров Picker App
+        text: |
+          [Для сборщика заказов]
+
+          [Для менеджера]
+
+          [Техническая информация для партнера]
+
+      - type: image-card
+        title: Ресурсы API для партнеров на интеграции
+        text: |
+          [Общее описание]
+
+          [Взаимодействие с номенклатурой]
+
+          [Взаимодействие с заказами]
+
+  - type: content-layout-block
+    size: s
+    textContent:
+      text: "\_"
+animated: true

@@ -20,6 +20,8 @@ To make changes and apply them:
 
 In case if you would like to make proxy from your own domain to this Documentation - please Contact Us - we will support you accordingly till appropriate documentation creation.
 
+[Ссылка на кат](test_page.md#acnhor-cut)
+   
 ## Key Actions Summary
 
 | Action | Description |
@@ -51,119 +53,452 @@ In case if you would like to make proxy from your own domain to this Documentati
 Теперь этот документ будет более наглядным и удобным для использования.
 
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentation Project Template</title>
-    <link type="text/css" rel="stylesheet" href="../app.client.css">
-    <script>
-        const events = new EventSource("/events");
-        events.addEventListener("reload", function (e) {
-            window.location.reload();
-        });
-    </script>
-     <link rel="stylesheet" href="styles.css">
-</head>
-<body class="yc-root yc-root_theme_light">
-    <div id="root">
-        <p>
-           # Basic "About page"
+# Справочник API
 
-            This is an example for basic documentation project.
-            It contains simple structure with couple of pages (this page, another page) and nested sub-section.
+С помощью API можно отправить URL одной или нескольких страниц сайта в&nbsp;Яндекс с&nbsp;поддержкой протокола IndexNow.
 
-            Diplodoc provides you with a unique name how this project can be reached on https://diplodoc.com like
-            "https://common---gh-aje0e4eg9hffg001r5e5.viewer.diplodoc.com/en/"
+## Отправка одной страницы
 
-            If you would like to extend your project - please refer to YFM Project Organization guide
+{% list tabs %}
 
-            All changes for this project can be done within you public github repository called "diplodoc-example/docs".
-            To make changes and apply them:
+- Формат запроса {#request-format}
 
-            - go to your repo under "diplodoc-example/docs"
-            - make changes for project structure or content
-            - commit & push into your repository
-            - go to "Actions" tab for docs repository
-            - run "Release" action and wait till completion
-            - done, updates should be available for everyone.
+  
+  GET https://yandex.com/indexnow
+    ? url=<String>
+    & key=<String>
+    & [keyLocation=<String>]
+  ```
+  
+  #|
+  ||
+  **Параметр**
+  |
+  **Тип**
+  |
+  **Обязательно**
+  |
+  **Описание**
+  ||
+  ||
+  `url`
+  |
+  String
+  |
+  Да
+  |
+  Адрес страницы, данные о которой вы хотите передавать. Должен соответствовать стандарту [RFC3986](https://www.ietf.org/rfc/rfc3986.txt).
+  ||
+  ||
+  `key`
+  |
+  String
+  |
+  Да
+  |
+  [Ключ для подтверждения прав на сайт]. При отправке запроса поисковая система сверяет это значение с&nbsp;содержимым файла.
+  ||
+  ||
+  `keyLocation` {#key-loc}
+  |
+  String
+  |
+  Нет
+  |
+  Указание на расположение файла с ключом, если он размещен не&nbsp;[в&nbsp;корневой директории сайта](key.md#how-to).
+  ||
+  |#
 
-            In case if you would like to make proxy from your own domain to this Documentation - please Contact Us - we will support you accordingly till appropriate documentation creation.
-        </p>
 
-        <h2>Key Actions Summary</h2>
-    <table class="styled-table">
-    <thead>
-        <tr>
-            <th>Action</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Navigate</td>
-            <td>Go to the diplodoc-example/docs repository on GitHub.</td>
-        </tr>
-        <tr>
-            <td>Edit</td>
-            <td>Make changes to project structure or content within the repository.</td>
-        </tr>
-        <tr>
-            <td>Commit & Push</td>
-            <td>Commit your changes and push them to the repository.</td>
-        </tr>
-         <tr>
-            <td>Run Workflow</td>
-            <td>Navigate to the "Actions" tab and run the "Release" workflow.</td>
-         </tr>
-          <tr>
-            <td>Wait</td>
-            <td>Wait for the workflow to complete.</td>
-        </tr>
-        <tr>
-            <td>View</td>
-            <td>Your updates are now available to everyone.</td>
-        </tr>
-    </tbody>
-</table>
-    <table class="styled-table" >
-        <thead>
-            <tr>
-                <th>Feature</th>
-                <th>Description</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>YFM Support</td>
-                <td>Support for YFM markdown.</td>
-                <td>✅</td>
-            </tr>
-            <tr>
-                <td>Multiple Pages</td>
-                <td>Ability to create multiple documentation pages.</td>
-                <td>✅</td>
-            </tr>
-              <tr>
-                <td>Sub-sections</td>
-                <td>Support for nested sub-sections.</td>
-                <td>✅</td>
-            </tr>
-           <tr>
-                <td>Custom Domains</td>
-                <td>Option to use custom domain name.</td>
-<td>🔜</td>
-            </tr>
+- Формат ответа {#response-format}
 
-        </tbody>
-    </table>
-</div>
-    <script type="application/javascript">
-        window.STATIC_CONTENT = false
-        window.DATA = {"data":{"leading":true,"toc":{"title":"Documentation Project Template","href":"index.html","items":[{"name":"About","href":"about.html","id":"About-0-0.569817454873452"},{"name":"Additional page","href":"page.html","id":"Additional page-1-0.04732388270643084"},{"name":"Another page","href":"anotherpage.html","id":"Another page-2-0.48827801702534135"},{"name":"Sub-Section","items":[{"name":"Content page under sub-section","href":"sub-section/content.html","id":"Content page under sub-section-0-0.21309824865677007"}],"id":"Sub-Section-3-0.8988413321656985"}],"base":"en"},"data":{"title":"Documentation Template","links":[{"title":"About","href":"about.html"},{"title":"Diplodoc page on index page","href":"page.html"},{"title":"YFM Structure on index page","href":"anotherpage.html"},{"title":"Sub-section on index page","href":"sub-section/"}]},"meta":{"style":[],"script":[]}},"router":{"pathname":"index.html"},"lang":"ru"};
-    </script>
-    <script type="application/javascript" src="../app.client.js"></script>
-</body>
-</html>
+  HTTP-код 200 OK
+
+  ```javascript
+  content-type: application/json
+  ```
+
+  Другие коды ответа: {#another-cods}
+
+  #|
+  ||
+  **Код**
+  |
+  **Причина**
+  | 
+  **Описание**
+  ||
+  ||
+  202
+  | 
+  Accepted
+  |
+  Новый ключ ожидает проверки. Если вы уверены в корректности ключа, подождите некоторое время и отправьте несколько других адресов. 
+  
+  Если код изменился на 200 OK, ключ проверен и адреса переданы. 
+  
+  Если остался код 202, ключ не добавлен в&nbsp;базу после проверки. Подождите&nbsp;еще. 
+  ||
+  ||
+  403
+  |
+  Invalid key
+  |
+  Ключ не удалось загрузить или он не&nbsp;подходит к&nbsp;указанным в&nbsp;запросе адресам.
+  ||
+  ||
+  405
+  |
+  Method not allowed
+  |
+  Методы GET и POST поддерживаются.
+  ||
+  ||
+  422
+  |
+  Invalid key location
+  | 
+  Параметр `keyLocation` указан неверно.
+  ||
+  ||
+  422
+  |
+  Invalid url
+  |
+  В запросе указан неверный URL-адрес или переданный ключ не&nbsp;подходит для его обработки.
+  ||
+  ||
+  422
+  |
+  Key must be at least 8 characters
+  |
+  Ключ включает в себя меньше 8 символов.
+  ||
+  ||
+  422
+  |
+  Key must be no longer than 128 characters
+  |
+  Ключ включает в себя больше 128 символов.
+  ||
+  ||
+  422
+  |
+  Key must consist of a-Z0-9 or '-'
+  |
+  Ключ содержит неподходящие символы.
+  ||
+  ||
+  422
+  |
+  No key provided
+  |
+  В запросе отсутствует параметр `key`.
+  ||
+  ||
+  422
+  |
+  No url provided
+  |
+  В запросе отсутствует параметр `url`.
+  ||
+  ||
+  429
+  |
+  Too Many Requests
+  |
+  Превышено количество запросов для одного IP-адреса.
+  ||
+  |#
+
+
+{% endlist %}
+
+
+## Отправка нескольких страниц
+
+
+{% list tabs %}
+
+- Формат запроса {#request-format}
+
+  ```
+  POST https://yandex.com/indexnow
+  ```
+  
+  
+  Чтобы передавать информацию о&nbsp;нескольких страницах, используйте формат&nbsp;JSON:
+
+  ```javascript
+  POST /indexnow HTTP/1.1
+  Content-Type: application/json; charset=utf-8
+  Content-Length: 286
+  Host: yandex.com
+  {
+    "host": "www.example.com",
+    "key": "EdD8dkmdNLlxREi2LkhJjYOH2kyQbJqM3cBKT5fX",
+    "keyLocation": "https://www.example.com/myIndexNowKey63638.html",
+    "urlList": [
+      "https://www.example.com/url1",
+      "https://www.example.com/folder/url2",
+      "https://www.example.com/url3"
+    ]
+  }
+  ```
+
+
+  #|
+  ||
+  **Параметр**
+  |
+  **Тип**
+  |
+  **Обязательно**
+  |
+  **Описание**
+  ||
+  ||
+  `host`
+  |
+  String
+  |
+  Да
+  |
+  Адрес вашего сайта.
+  ||
+  ||
+  `key`
+  |
+  String
+  |
+  Да
+  |
+  Ключ для подтверждения прав на сайт.
+  ||
+  ||
+  `keyLocation`
+  |
+  String
+  |
+  Нет
+  |
+  Указание на расположение ключа, если он размещен не&nbsp;.
+  ||
+  ||
+  `urlList`
+  |
+  Array
+  |
+  Да
+  |
+  Содержит адреса страниц (String), данные о&nbsp;которых вы хотите передавать.
+  
+  В одном запросе можно передавать до&nbsp;10&nbsp;000 адресов.
+  ||
+  |#
+
+
+- Формат ответа {#response-format}
+
+  HTTP-код 200&nbsp;OK
+
+  ```javascript
+  content-type: application/json
+  ```
+
+  Другие коды ответа:
+
+
+  #|
+  ||
+  **Код**
+  |
+  **Причина**
+  |
+  **Описание**
+  ||
+  ||
+  202
+  |
+  Accepted
+  |
+  Новый ключ ожидает
+п
+роверки. Если вы уверены в корректности ключа, подождите некоторое время и отправьте несколько других адресов. 
+  
+  Если код изменился на 200&nbsp;OK, ключ проверен и адреса переданы. 
+  
+  Если остался код 202, ключ не был добавлен в базу после проверки. Подждите еще.
+  ||
+  ||
+  400
+  |
+  Invalid params
+  |
+  В теле запроса переданы некорректные параметры.
+  ||
+  ||
+  403
+  | 
+  Invalid key
+  |
+  Ключ не удалось загрузить или он не&nbsp;подходит к&nbsp;указанным в&nbsp;запросе адресам.
+  ||
+  ||
+  405
+  |
+  Method not allowed
+  |
+  Методы GET и POST поддерживаются.
+  ||
+  ||
+  422
+  |
+  Invalid key location
+  |
+  Параметр `keyLocation` указан неверно.
+  ||
+  ||
+  422
+  |
+  Invalid url
+  |
+  В&nbsp;запросе указан неверный URL-адрес или переданный ключ не&nbsp;подходит для&nbsp;его обработки.
+  ||
+  ||
+  422
+  |
+  Key must be at least 8 characters
+  | 
+  Ключ включает в&nbsp;себя меньше 8&nbsp;символов.
+  ||
+  ||
+  422
+  |
+  Key must be no longer than 128 characters
+  |
+  Ключ включает в&nbsp;себя больше 128&nbsp;символов.
+  ||
+  ||
+  422
+  |
+  Key must consist of a-Z0-9 or '-'
+  |
+  Ключ содержит неподходящие символы.
+  ||
+  ||
+  422
+  |
+  No host provided
+  |
+  В запросе отсутствует параметр `host`.
+  ||
+  ||
+  422
+  |
+  No key provided
+  |
+  В запросе отсутствует параметр `key`.
+  ||
+  ||
+  422
+  |
+  No more than 10000 urls allowed
+  |
+  Параметр `urlList` содержит больше 10&nbsp;000 URL-адресов.
+  ||
+  ||
+  422
+  |
+  No url provided
+  |
+  В запросе отсутствует параметр `url`.
+  ||
+  ||
+  422
+  |
+  Url list has to be an array
+  |
+  Отсутствует параметр `urlList` или он не&nbsp;является массивом.
+  ||
+  ||
+  422
+  |
+  Url list cannot be empty
+  |
+  Передан пустой параметр `urlList`.
+  ||
+  ||
+  422
+  |
+  Url has to be an array of string
+  |
+  Параметр `urlList` должен содержать данные типа String.
+  ||
+  ||
+  429
+  |
+  Too Many Requests
+  |
+  Превышено количество запросов для&nbsp;одного IP-адреса.
+  ||
+  |#
+
+
+{% endlist %}
+
+## Вопросы и ответы {#qanda}
+
+
+{% cut "Насколько часто можно передавать запросы?" %}
+
+Ограничений на количество запросов нет. Вы можете регулировать их частоту — Яндекс использует алгоритмы, которые препятствуют слишком большому потоку запросов.
+
+{% endcut %}
+
+{% cut "Можно ли отправлять один и тот же URL-адрес несколько раз в&nbsp;день?" %}
+
+Мы не&nbsp;рекомендуем оправлять слишком часто один и тот же адрес. Если это необходимо, делайте паузу между отправками 10&nbsp;минут. 
+
+{% endcut %}
+
+{% cut "Можно ли отправлять страницы с HTTP-кодом 404 через API?" %}
+
+Да, можно использовать IndexNow, чтобы сообщать о&nbsp;страницах с&nbsp;кодом 404 или 410.
+
+{% endcut %}
+
+{% cut "Можно ли передавать страницы с HTTP-кодом 301 или 302 (перенаправление)?" %}
+
+Да, можно передавать адреса с&nbsp;информацией о&nbsp;редиректе или других изменениях.
+
+{% endcut %}
+
+<div class="cut-button">
+
+{% cut "Написать в службу поддержки" %}
+
+ 
+Если у вас есть вопрос о&nbsp;работе инструмента, выберите подходящий вариант:
+
+{% list tabs accordion %}
+
+- В поиск не попадают проиндексированные страницы
+
+  Посмотрите рекомендации в разделе .
+  
+- Нужно удалить проиндексированные страницы из поиска
+
+  Воспользуйтесь рекомендациями, как ). Поисковая выдача обновляется в&nbsp;течение двух&nbsp;недель.  
+  
+
+{% endlist %}
+
+
+
+
+
+
+
+
+<!--[*url]: Адрес страницы, данные о которой вы хотите передавать. Должен соответствовать стандарту [RFC3986](https://www.ietf.org/rfc/rfc3986.txt).
