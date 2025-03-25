@@ -36,11 +36,11 @@ jobs:
         uses: diplodoc-platform/docs-build-action@v3
         with:
           src-root: './docs'
-          build-root: './docs-html'
+          build-root: './docs-html/_bundle'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './docs-html'
+          path: './docs-html/_bundle'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
