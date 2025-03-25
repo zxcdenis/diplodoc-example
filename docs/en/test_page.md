@@ -327,4 +327,3 @@ hello_world()
 2. <p style="color: green">Еще какой-то текст</p> текст екст
 3. **text**{style="color:purple; font-weight: normal;"} text
 
-
