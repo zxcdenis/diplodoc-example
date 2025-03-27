@@ -1,1 +1,1 @@
-window.__DATA__.data.toc = {"title":"Sub-section Example TOC","href":"ru\\sub-section\\index.html","items":[{"name":"Content page under sub-section","href":"ru\\sub-section\\content.html","id":"Content page under sub-section-0-0.48688262756051515"}]};
+window.__DATA__.data.toc = {"title":"Sub-section Example TOC","href":"ru\\sub-section\\index.html","items":[{"name":"Content page under sub-section","href":"ru\\sub-section\\content.html","id":"Content page under sub-section-0-0.5496156208132348"}]};

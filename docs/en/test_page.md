@@ -327,3 +327,18 @@ hello_world()
 2. <p style="color: green">Еще какой-то текст</p> текст екст
 3. **text**{style="color:purple; font-weight: normal;"} text
 
+<div style="padding: 15px;
+     height: calc(100vh - 20px); 
+     background: #FFFFFF;
+     border-radius: 10px;
+     border: 1px solid var(--yc-color-line-generic);
+     box-sizing: border-box;
+     margin: 10px 0;">
+  
+  <iframe style="height: 100%;
+          width: 100%;
+          background: #FFFFFF;
+          border: 0;"
+          src="https://forms.yandex.ru/surveys/13731662.6defc8ba70dee4bfec0b7fc5302a9e8462dbcac5/?&iframe=1?embed=1">
+  </iframe>
+</div>

@@ -1,8 +1,11 @@
 langs: ['en','ru']
+docs-viewer:
+  embed:
+    - host: 'https://forms.yandex.ru'
 logo-options:
   src:
     en: .\en\assets\icons\Screenshot.png
 resources:
   csp:
     - "frame-src":
-        - "https://docs.yandex-team.ru/tracker/"
+        - "https://forms.yandex.ru"
